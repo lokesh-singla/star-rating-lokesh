@@ -1,10 +1,11 @@
 import React from 'react'
 import Comment from './Comment'
 import MultipleStars from './MultipleStars'
+import './Merge.css'
 
 const Merge = (props) => {
   return (
-    <div>
+    <div className="merge">
         <MultipleStars
         mode={props.mode}
         numberOfStars={props.numberOfStars} 
@@ -12,6 +13,7 @@ const Merge = (props) => {
         initiallySelectedStars={props.initiallySelectedStars}
         starMargin={props.starMargin}
         clickEvent={props.clickEvent}
+        rootCSS={props.rootCSS}
         />
         <Comment
         mode={props.mode}
@@ -19,6 +21,7 @@ const Merge = (props) => {
         inputEvent={props.inputEvent}
         focusEvent={props.focusEvent}
         maxCharLength={props.maxCharLength}
+        rootCSS={props.rootCSS}
         />
     </div>
   )

@@ -4,6 +4,10 @@ import Merge from './Merge'
 
 const StarRating = (props) => {
 
+  if((props.mode!="view")&&(props.mode!="edit")){
+    console.error("ENTER CORRECT INFO!")
+  }
+
   function clickEvent(){
 
     const {clickEvent}=props;
@@ -44,6 +48,7 @@ const StarRating = (props) => {
     inputEvent={inputEvent}
     focusEvent={focusEvent}
     maxCharLength={props.maxCharLength}
+    rootCSS={props.rootCSS}
     />
   );
 }
@@ -59,6 +64,7 @@ StarRating.propTypes={
   focusEvent:PropTypes.func,
   blurEvent:PropTypes.func,
   inputEvent:PropTypes.func,
+  rootCSS:PropTypes.object,
 }
 
 export default StarRating

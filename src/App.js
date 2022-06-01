@@ -20,6 +20,10 @@ function App() {
     console.log("USER FOCUSED!");
   }
 
+  const style={
+    color:"red"
+  }
+
   return (
     <div className="App">
       <StarRating
@@ -33,6 +37,7 @@ function App() {
         inputEvent={handleInputEvent}
         focusEvent={handleFocusEvent}
         maxCharLength={15}
+        rootCSS={style}
       />
     </div>
   );

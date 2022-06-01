@@ -9,7 +9,7 @@ const MultipleStars = (props) => {
 
     return (
         <div className="multiStars">
-            <h1>GIVE US RATING!</h1>
+            <h1 style={props.rootCSS}>GIVE US RATING!</h1>
             {
                 [...Array(props.numberOfStars)].map((ele, i) => {
                     return (

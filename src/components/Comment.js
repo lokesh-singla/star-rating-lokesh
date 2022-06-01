@@ -22,7 +22,7 @@ const Comment = (props) => {
 
     return (
         <div className="detailBox">
-            <h1>GIVE US YOUR VIEWS!</h1>
+            <h1 style={props.rootCSS}>GIVE US YOUR VIEWS!</h1>
             <div className="titleBox">
                 <label>Comment Box</label>
             </div>
