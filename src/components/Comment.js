@@ -17,8 +17,8 @@ const Comment = (props) => {
     }
 
     return (
-        <div className="detailBox">
-            <h1 style={props.rootCSS}>GIVE US YOUR VIEWS!</h1>
+        <div className="detailBox" style={props.rootCSS}>
+            <h1>GIVE US YOUR VIEWS!</h1>
             <div className="actionBox">
             <Input
                 maxCharLength={props.maxCharLength}

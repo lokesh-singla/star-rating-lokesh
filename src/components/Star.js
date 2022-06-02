@@ -3,11 +3,7 @@ import './Star.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Star=(props)=>{
-
-    // let styles={
-    //     color: (props.index <= props.rating) ? props.starColor : null,
-    //     margin: props.starMargin
-    // }
+    
 
     const handleOnClick= useCallback(
       (e) => {
@@ -33,11 +29,11 @@ const Star=(props)=>{
     return (
         <button type="button" 
         onClick={handleOnClick} 
+        style={props.childStarCSS}
         className={props.isSelected ? "on" : "off"}
         disabled={props.mode==="view"}
         onFocus={()=>handleOnFocus()}
         onBlur={()=>handleOnBlur()}
-        style={props.childStarCSS}
         >
         &#xe006;
         </button>

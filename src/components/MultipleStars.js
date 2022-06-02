@@ -6,8 +6,8 @@ import { StarWrapper } from './StarWrapper';
 const MultipleStars = (props) => {
 
     return (
-        <div className="multiStars">
-            <h1 style={props.rootCSS}>GIVE US RATING!</h1>
+        <div className="multiStars" style={props.rootCSS}>
+            <h1>GIVE US RATING!</h1>
                 <StarWrapper
                 numberOfStars={props.numberOfStars}
                 mode={props.mode}
