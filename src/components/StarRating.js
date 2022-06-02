@@ -4,7 +4,7 @@ import Merge from './Merge'
 
 const StarRating = (props) => {
 
-  if((props.mode!="view")&&(props.mode!="edit")){
+  if((props.mode!=="view")&&(props.mode!=="edit")){
     console.error("ENTER CORRECT INFO!")
   }
 

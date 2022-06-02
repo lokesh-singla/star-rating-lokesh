@@ -15,7 +15,7 @@ const Star=(props)=>{
         e.stopPropagation()
         props.onClick(props.index)
       },
-    )
+    [props])
     
 
     function handleOnFocus(){

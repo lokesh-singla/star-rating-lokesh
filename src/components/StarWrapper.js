@@ -20,7 +20,7 @@ export const StarWrapper = (props) => {
           e.stopPropagation()
           props.clickEvent()
         },
-      )
+      [props])
 
     return (
         <div style={props.rootCSS} onClick={handleClickEvent}>
