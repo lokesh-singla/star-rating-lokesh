@@ -33,7 +33,7 @@ export const Input = (props) => {
                         }} />
                 </div>
                 <div className="form-group">
-                    <button className="bt" disabled={props.mode=="view"} onClick={handleSetComments}>Add</button>
+                    <button className="bt" disabled={props.mode=="view"} onClick={handleSetComments} aria-label="COMMENT ADDED">Add</button>
                 </div>
             </form>
         </>

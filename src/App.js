@@ -25,7 +25,7 @@ function App() {
 
   const childStyle={
     height: 35,
-    color:"blue"
+    color:"black"
   }
 
   return (

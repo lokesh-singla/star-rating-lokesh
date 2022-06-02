@@ -26,8 +26,11 @@ const Star=(props)=>{
         console.log("STAR BLURRED");
     } 
 
+    const val=`You are on ${props.index+1} star`
+
     return (
-        <button type="button" 
+        <button type="button"
+        aria-label= {val}
         onClick={handleOnClick} 
         style={props.childStarCSS}
         className={props.isSelected ? "on" : "off"}
@@ -35,7 +38,7 @@ const Star=(props)=>{
         onFocus={()=>handleOnFocus()}
         onBlur={()=>handleOnBlur()}
         >
-        &#xe006;
+        ☆
         </button>
     )
 }
