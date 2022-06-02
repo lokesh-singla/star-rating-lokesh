@@ -6,6 +6,7 @@ export const Input = (props) => {
 
     function handleSetComments(event){
         event.preventDefault();
+        event.stopPropagation();
         if(comment.trim()!=="") props.onClick(comment);
         setComment("");
     }

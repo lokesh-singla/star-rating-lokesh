@@ -1,26 +1,26 @@
 import React from 'react';
 import Star from './Star';
-import { useState,useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 export const StarWrapper = (props) => {
 
-    const [rating, setRating] = useState(-1+props.initiallySelectedStars);
+    const [rating, setRating] = useState(-1 + props.initiallySelectedStars);
 
-    function handleOnClick(index){
+    function handleOnClick(index) {
         setRating(index);
     }
 
-    const handleClickEvent= useCallback(
+    const handleClickEvent = useCallback(
         (e) => {
-          if(props.mode==="view"){
-              e.preventDefault();
-              return;
-          }
-  
-          e.stopPropagation()
-          props.clickEvent()
+            e.preventDefault()
+            if (props.mode === "view") {
+                return;
+            }
+
+            e.stopPropagation()
+            props.clickEvent()
         },
-      [props])
+        [props])
 
     return (
         <div style={props.rootCSS} onClick={handleClickEvent}>

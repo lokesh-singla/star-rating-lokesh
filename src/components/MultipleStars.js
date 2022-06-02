@@ -5,7 +5,7 @@ import { StarWrapper } from './StarWrapper';
 const MultipleStars = (props) => {
 
     return (
-        <div className="multiStars" style={props.rootCSS}>
+        <div className="multiStars" style={props.rootCSS} aria-label={`Total ${props.numberOfStars} are present`}>
             <h1>GIVE US RATING!</h1>
                 <StarWrapper
                 numberOfStars={props.numberOfStars}
