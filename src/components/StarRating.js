@@ -39,32 +39,30 @@ const StarRating = (props) => {
   return (
     <Merge
     mode={props.mode}
-    starColor={props.starColor}
     numberOfStars={props.numberOfStars}
     initiallySelectedStars={props.initiallySelectedStars}
-    starMargin={props.starMargin}
     clickEvent={clickEvent}
     blurEvent={blurEvent}
     inputEvent={inputEvent}
     focusEvent={focusEvent}
     maxCharLength={props.maxCharLength}
     rootCSS={props.rootCSS}
+    childStarCSS={props.childStarCSS}
     />
   );
 }
 
 StarRating.propTypes={
   mode:PropTypes.string.isRequired,
-  starColor:PropTypes.string.isRequired,
   numberOfStars:PropTypes.number.isRequired,
   initiallySelectedStars:PropTypes.number.isRequired,
-  starMargin:PropTypes.string,
   maxCharLength:PropTypes.number,
   clickEvent:PropTypes.func,
   focusEvent:PropTypes.func,
   blurEvent:PropTypes.func,
   inputEvent:PropTypes.func,
   rootCSS:PropTypes.object,
+  childStarCSS:PropTypes.object,
 }
 
 export default StarRating

@@ -14,6 +14,7 @@ const Merge = (props) => {
         starMargin={props.starMargin}
         clickEvent={props.clickEvent}
         rootCSS={props.rootCSS}
+        childStarCSS={props.childStarCSS}
         />
         <Comment
         mode={props.mode}

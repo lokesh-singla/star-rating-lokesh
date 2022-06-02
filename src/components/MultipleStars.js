@@ -1,30 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
-import Star from './Star';
 import './MultipleStars.css';
+import { StarWrapper } from './StarWrapper';
 
 const MultipleStars = (props) => {
-
-    const [rating, setRating] = useState(-1+props.initiallySelectedStars);
 
     return (
         <div className="multiStars">
             <h1 style={props.rootCSS}>GIVE US RATING!</h1>
-            {
-                [...Array(props.numberOfStars)].map((ele, i) => {
-                    return (
-                        <Star 
-                        mode={props.mode}
-                        index={i} 
-                        setRating={setRating} 
-                        rating={rating} 
-                        starColor={props.starColor} 
-                        starMargin={props.starMargin}
-                        clickEvent={props.clickEvent}
-                        />
-                    );
-                })
-            }
+                <StarWrapper
+                numberOfStars={props.numberOfStars}
+                mode={props.mode}
+                clickEvent={props.clickEvent}
+                childStarCSS={props.childStarCSS}
+                initiallySelectedStars={props.initiallySelectedStars}
+                rootCSS={props.rootCSS}
+                />
         </div>
     )
 }
