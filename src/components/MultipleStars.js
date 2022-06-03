@@ -7,14 +7,14 @@ const MultipleStars = (props) => {
     return (
         <div className="multiStars" style={props.rootCSS} aria-label={`Total ${props.numberOfStars} are present`}>
             <h1>GIVE US RATING!</h1>
-                <StarWrapper
+            <StarWrapper
                 numberOfStars={props.numberOfStars}
                 mode={props.mode}
                 clickEvent={props.clickEvent}
                 childStarCSS={props.childStarCSS}
                 initiallySelectedStars={props.initiallySelectedStars}
                 rootCSS={props.rootCSS}
-                />
+            />
         </div>
     )
 }

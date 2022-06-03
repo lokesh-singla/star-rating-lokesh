@@ -20,15 +20,15 @@ const Comment = (props) => {
         <div className="detailBox" style={props.rootCSS}>
             <h1>GIVE US YOUR VIEWS!</h1>
             <div className="actionBox">
-            <Input
-                maxCharLength={props.maxCharLength}
-                focusEvent={props.focusEvent}
-                blurEvent={props.blurEvent}
-                inputEvent={props.inputEvent}
-                mode={props.mode}
-                onClick={handleSetComments}
-            />
-            <CommentList comments={comments} />
+                <Input
+                    maxCharLength={props.maxCharLength}
+                    focusEvent={props.focusEvent}
+                    blurEvent={props.blurEvent}
+                    inputEvent={props.inputEvent}
+                    mode={props.mode}
+                    onClick={handleSetComments}
+                />
+                <CommentList comments={comments} />
             </div>
         </div>
     )

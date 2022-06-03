@@ -4,10 +4,10 @@ export const Input = (props) => {
 
     const [comment, setComment] = useState("");
 
-    function handleSetComments(event){
+    function handleSetComments(event) {
         event.preventDefault();
         event.stopPropagation();
-        if(comment.trim()!=="") props.onClick(comment);
+        if (comment.trim() !== "") props.onClick(comment);
         setComment("");
     }
 
@@ -16,7 +16,7 @@ export const Input = (props) => {
             <form type="submit">
                 <div className="form-group">
                     <input className="form-control" type="text" placeholder="Your comments" value={comment} aria-label="ENTER YOUR COMMENY"
-                        disabled={props.mode==="view"}
+                        disabled={props.mode === "view"}
                         maxLength={props.maxCharLength}
                         onFocus={(e) => {
                             e.preventDefault()
@@ -34,7 +34,7 @@ export const Input = (props) => {
                         }} />
                 </div>
                 <div className="form-group">
-                    <button className="bt" disabled={props.mode==="view"} onClick={handleSetComments} aria-label="COMMENT ADDED">Add</button>
+                    <button className="bt" disabled={props.mode === "view"} onClick={handleSetComments} aria-label="COMMENT ADDED">Add</button>
                 </div>
             </form>
         </>
